@@ -12,5 +12,6 @@ public class RomanNumberGeneratorShould {
     public void generate_roman_number_for_a_given_decimal() {
         assertThat(generate(1), is("I"));
         assertThat(generate(2), is("II"));
+        assertThat(generate(3), is("III"));
     }
 }
