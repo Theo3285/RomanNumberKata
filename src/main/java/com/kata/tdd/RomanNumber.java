@@ -2,12 +2,10 @@ package com.kata.tdd;
 
 public class RomanNumber {
     public static String generate(int decimal) {
-        if(decimal == 3){
-            return "III";
+        String roman = "";
+        for (int i = 0; i < decimal; ++i) {
+            roman += "I";
         }
-        if(decimal == 2){
-            return "II";
-        }
-        return "I";
+        return roman;
     }
 }
