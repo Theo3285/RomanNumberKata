@@ -14,5 +14,6 @@ public class RomanNumberGeneratorShould {
         assertThat(generate(2), is("II"));
         assertThat(generate(3), is("III"));
         assertThat(generate(5), is("V"));
+        assertThat(generate(6), is("VI"));
     }
 }
