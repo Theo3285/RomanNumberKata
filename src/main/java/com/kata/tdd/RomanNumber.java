@@ -2,14 +2,14 @@ package com.kata.tdd;
 
 public class RomanNumber {
     public static String generate(int decimal) {
-        String roman = "";
+        StringBuilder roman = new StringBuilder();
         for (RomanToDecimal romanToDecimal : RomanToDecimal.values()) {
             while (decimal >= romanToDecimal.decimal) {
-                roman += romanToDecimal.roman;
+                roman.append(romanToDecimal.roman);
                 decimal -= romanToDecimal.decimal;
             }
         }
-        return roman;
+        return roman.toString();
     }
 
     enum RomanToDecimal {
