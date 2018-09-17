@@ -4,13 +4,10 @@ public class RomanNumber {
     public static String generate(int decimal) {
         String roman = "";
         for (RomanToDecimal romanToDecimal : RomanToDecimal.values()) {
-            if (decimal >= romanToDecimal.decimal) {
+            while (decimal >= romanToDecimal.decimal) {
                 roman += romanToDecimal.roman;
                 decimal -= romanToDecimal.decimal;
             }
-        }
-        for (int i = 0; i < decimal; ++i) {
-            roman += "I";
         }
         return roman;
     }
@@ -18,7 +15,8 @@ public class RomanNumber {
     enum RomanToDecimal {
         TEN("X", 10),
         FIVE("V", 5),
-        FOUR("IV", 4);
+        FOUR("IV", 4),
+        ONE("I", 1);
 
         private final String roman;
         private final int decimal;
