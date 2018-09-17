@@ -13,10 +13,13 @@ public class RomanNumberGeneratorShould {
         assertThat(generate(1), is("I"));
         assertThat(generate(2), is("II"));
         assertThat(generate(3), is("III"));
+        assertThat(generate(4), is("IV"));
         assertThat(generate(5), is("V"));
         assertThat(generate(6), is("VI"));
         assertThat(generate(7), is("VII"));
         assertThat(generate(8), is("VIII"));
         assertThat(generate(10), is("X"));
+        assertThat(generate(11), is("XI"));
+        assertThat(generate(16), is("XVI"));
     }
 }

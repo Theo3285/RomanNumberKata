@@ -17,7 +17,8 @@ public class RomanNumber {
 
     enum RomanToDecimal {
         TEN("X", 10),
-        FIVE("V", 5);
+        FIVE("V", 5),
+        FOUR("IV", 4);
 
         private final String roman;
         private final int decimal;
